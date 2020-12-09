@@ -15,7 +15,7 @@ public class MyPanel extends JPanel implements ActionListener
     JButton add;
     JButton clear;
     JComboBox gradeBox;
-    JScrollPane textArea;
+    JTextArea textArea;
     private String[] grade = {"1학년","2학년","3학년","4학년"};
     public MyPanel(){
         JLabel nlabel = new JLabel("이름");
@@ -31,8 +31,9 @@ public class MyPanel extends JPanel implements ActionListener
         clear = new JButton("Clear");
         
         gradeBox = new JComboBox(grade);
+        gradeBox.setSelectedIndex(1);
         
-        textArea = new JScrollPane(new JTextArea(10 , 25));
+        textArea = new JTextArea(10 , 25);
         
         this.add(nlabel);
         this.add(ntf);
@@ -45,9 +46,20 @@ public class MyPanel extends JPanel implements ActionListener
         this.add(add);
         this.add(clear);
         this.add(textArea);
+        
+        add.addActionListener(this);
     }
     
     public void actionPerformed(ActionEvent e){
-        
+        if(add.equals(e.getSource())){
+            textArea.append("이름: " + ntf.getText() + "\n");
+            textArea.append("학과: " + dptf.getText() + "\n");
+            textArea.append("학년: " + (String)gradeBox.getSelectedItem() + "\n");
+            textArea.append("주소: " + adtf.getText() + "\n");
+            textArea.append("------------------------------------------\n");
+        }
+        else if(clear.equals(e.getSource())){
+            
+        }
     }
 }
