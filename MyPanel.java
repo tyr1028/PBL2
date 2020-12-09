@@ -16,6 +16,7 @@ public class MyPanel extends JPanel implements ActionListener
     JButton clear;
     JComboBox gradeBox;
     JScrollPane textArea;
+    private String[] grade = {"1학년","2학년","3학년","4학년"};
     public MyPanel(){
         JLabel nlabel = new JLabel("이름");
         JLabel dplabel = new JLabel("학과");
@@ -29,9 +30,9 @@ public class MyPanel extends JPanel implements ActionListener
         add = new JButton("추가");
         clear = new JButton("Clear");
         
-        gradeBox = new JComboBox();
+        gradeBox = new JComboBox(grade);
         
-        textArea = new JScrollPane(new JTextArea(8 , 22));
+        textArea = new JScrollPane(new JTextArea(10 , 25));
         
         this.add(nlabel);
         this.add(ntf);
@@ -47,6 +48,6 @@ public class MyPanel extends JPanel implements ActionListener
     }
     
     public void actionPerformed(ActionEvent e){
-    
+        
     }
 }
