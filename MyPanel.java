@@ -2,10 +2,10 @@ import java.awt.event.*;
 import java.awt.*;
 import javax.swing.*;
 /**
- * Panel
+ * Write a description of class MyPanel here.
  *
- * @author (2019315007 이주열, 2019315015 김민수)
- * @version (2020.12.09)
+ * @author (your name)
+ * @version (a version number or a date)
  */
 public class MyPanel extends JPanel implements ActionListener
 {
@@ -35,7 +35,6 @@ public class MyPanel extends JPanel implements ActionListener
         gradeBox.setSelectedIndex(1);
         
         textArea = new JTextArea(10 , 25);
-     
         scrollpane = new JScrollPane(textArea);
         
         this.add(nlabel);
