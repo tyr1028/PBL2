@@ -9,7 +9,7 @@ public class TextFieldFrame extends JFrame
 {
     public TextFieldFrame() {
         this.setTitle("과제#3(2019315007 이주열, 2019315015 김민수)");
-        this.setSize(280, 400);
+        this.setSize(280, 360);
         
         MyPanel mp = new MyPanel();
         this.add(mp);
